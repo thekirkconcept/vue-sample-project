@@ -15,6 +15,8 @@
 <hr>
 <input type="text" v-model="user.firstName" placeholder="First Name">
 <input type="text" v-model="user.lastName" v-on:keyup.enter="enterHit" placeholder="Last Name">
+
+<h3>{{ fullname }}</h3>
     </div>
 </template>
 
@@ -47,6 +49,11 @@
             enterHit: function() {
                 console.log('You hit enter.');
             }
+        },
+        computed: {
+            fullname: function() {
+                return this.user.firstName+ ' ' +this.user.lastName;
+            }
         }
     }
  </script>
@@ -60,7 +67,6 @@
         padding: 10px 1%;
         background: orange;
         display: inline-block;
-        float: left;
         margin: 0;
     }
  </style>
