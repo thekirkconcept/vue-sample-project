@@ -28,6 +28,8 @@
                 greeting: 'Hello',
                 thoughts: 'Happy',
                 user: {
+                    firstName: 'Christopher',
+                    lastName: 'Jones',
                     position: 'Graphic Designer'
                 },
                 showName: true,
