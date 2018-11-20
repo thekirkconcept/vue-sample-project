@@ -8,7 +8,7 @@
         <input type="text" placeholder="Mad" v-model="thoughts">
         <p><b>What I am thinking:</b> {{ thoughts }}</p>
         <ul class="hobbies">
-            <li v-for="item in items">{{item.title}}</li>
+            <li v-bind:key="item" v-for="item in items">{{item.title}}</li>
         </ul>
         <button v-on:click="greet('Hi, Bud')">Click Me</button>
 <input type="text" v-on:keyup="pressKey" v-on:keyup.enter="enterHit">
@@ -60,7 +60,7 @@
         padding: 10px 1%;
         background: orange;
         display: inline-block;
-        float: left;
+
         margin: 0;
     }
  </style>
