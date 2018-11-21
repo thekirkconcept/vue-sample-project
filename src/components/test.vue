@@ -17,12 +17,19 @@
 <input type="text" v-model="user.lastName" v-on:keyup.enter="enterHit" placeholder="Last Name">
 
 <h3>{{ fullname }}</h3>
+<h4>{{ msg }}</h4>
     </div>
 </template>
 
 <script>
     export default {
         name: 'test',
+        props: {
+            msg: {
+                type: String,
+                default:'I love wings.'
+            }
+        },
         data() {
             return {
                 greeting: 'Hello',
