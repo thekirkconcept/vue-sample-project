@@ -27,7 +27,6 @@
             return {
                 newUser: {},
                 users: [
-                    
                     {
                         name: 'Christopher Jones',
                         contacted: false,
@@ -58,6 +57,12 @@
             deleteUser: function(user) {
                 this.users.splice(this.users.indexOf(user), 1);
             }
+        },
+        created: function() {
+            this.$http.get('https://jsonplaceholder.typicode.com/users')
+            .then(function(response) {
+                console.log(response.data);
+            })
         }
     }
  </script>

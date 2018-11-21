@@ -1,17 +1,16 @@
 <template>
   <div id="app">
-    <users></users>
+    <Home></Home>
   </div>
 </template>
 
 <script>
-import Test from './components/test'
-import Users from './components/users'
+import Home from './components/home'
 
 export default {
   name: 'App',
   components: {
-    Test, Users
+    Home
   }
 }
 </script>
@@ -23,6 +22,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.main {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 </style>
